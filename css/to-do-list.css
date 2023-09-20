@@ -1,0 +1,526 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start To-do List App */
+.to-do-app {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.to-do-app .container {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to-do-app .container h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+}
+.to-do-app .container .task-input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.to-do-app .container .task-input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.to-do-app .container .task-input-box button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.to-do-app .container ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.to-do-app .container ul li::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 free";
+    position: absolute;
+    border-radius: 50%;
+    left: 8px;
+    top: 9px;
+    font-size: 25px;
+    color: #777;
+}
+.to-do-app .container ul li.active {
+    color: #555;
+    text-decoration: line-through;
+}
+.to-do-app .container ul li.active::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 free";
+    line-height: 1;
+    color: #ff5945;
+    font-weight: 900;
+}
+.to-do-app .container ul li span {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.to-do-app .container ul li span:hover {
+    background-color: #edeef0;
+}
+/* End To-do List App */
+/* --------------------------------------------------------------------------------------- */
+/* Start Wheather App */
+.weather-app {
+    /* background: #222; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.weather-app .container {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.weather-app .container .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.weather-app .container .search input {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.weather-app .container .search button {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.weather-app .container .weather img {
+    width:45%;
+    /* width: 170px; */
+    margin-top: 30px;
+}
+.weather-app .container .weather h1 {
+    font-size: 80px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+.weather-app .container .weather h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-top: -20px;
+}
+.weather-app .container .weather .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.weather-app .container .weather .details .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.weather-app .container .weather .details .col i{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.weather-app .container .weather .details .col p:first-child{
+    font-size: 28px;
+}
+/* End Weather App */
+/* --------------------------------------------------------------------------------------- */
+/* Start Weather App V2 */
+.weather-app-v2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+.weather-app-v2 .container {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 7px;
+}
+.weather-app-v2 .container h2 {
+    color: #002765;
+    font-weight: bold;
+    padding: 16px 15px;
+    border-bottom: 1px solid #bfbfbf;
+    display: flex;
+    align-items: center;
+} 
+.weather-app-v2 .container h2 i {
+    cursor: pointer;
+    margin-right: 13px;
+    font-size: 0px;
+}
+.weather-app-v2.active h2 i  {
+    font-size: 30px;
+    margin: 2px;
+}
+.weather-app-v2 .container .input-part {
+    margin: 20px 25px 30px;
+}
+.weather-app-v2.active .input-part {
+    display: none;
+}
+.weather-app-v2 .container .input-part .info-txt {
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.weather-app-v2 .container .input-part .info-txt.error {
+    display: block;
+    color: #721c24 ;
+    background-color: #f8d7da ;
+    border:1px solid #f8d7da ;
+}
+.weather-app-v2 .container .input-part .info-txt.pending {
+    display: block;
+    color: #0c5460 ;
+    background-color: #d1ecf1 ;
+    border:1px solid #d1ecf1 ;
+}
+.weather-app-v2 .container .input-part :where(input,button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+}
+.weather-app-v2 .container .input-part input {
+    background-color: #edeef0;
+    text-align: center;
+
+}
+.weather-app-v2 .container .input-part input:is(:focus, :valid) {
+    border: 2px solid blue;
+}
+.weather-app-v2 .container .input-part .separator {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-app-v2 .container .input-part .separator::after {
+    content: "or";
+    background-color: #ffff;
+    font-size: 19px;
+    padding: 0 15px;
+    color: #ccc;
+}
+.weather-app-v2 .container .input-part button {
+    color: #ffff;
+    cursor: pointer;
+    background-color: blue;
+}
+
+
+.weather-app-v2 .container .weather-part {
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weather-app-v2.active .weather-part {
+    display: flex;
+}
+.weather-app-v2 .container .weather-part img {
+    max-width: 170px;
+}
+.weather-app-v2 .container .weather-part .temp {
+    display: flex;
+    font-size: 72px;
+    font-weight: bold;
+}
+.weather-app-v2 .container .weather-part .temp .numb {
+    font-weight: bold;
+}
+.weather-app-v2 .container .weather-part .temp .deg {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+.weather-app-v2 .container .weather-part .weather {
+    text-align: center;
+    font-size: 21px;
+    margin: -5px 20px 15px;
+}
+.weather-app-v2 .container .weather-part .location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 21px;
+}
+.weather-app-v2 .container .weather-part .location i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+.weather-app-v2 .container .weather-part .bottom-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+}
+.weather-app-v2 .container .weather-part .bottom-details .column{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+}
+.weather-app-v2 .container .weather-part .bottom-details .column i {
+    font-size: 40px;
+    color: blue;
+}
+.weather-app-v2 .container .weather-part .bottom-details .column.humidity {
+    border-left: 1px solid #bfbfbf;
+}
+.weather-app-v2 .container .weather-part .bottom-details .details .temp,
+.weather-app-v2 .container .weather-part .humidity span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -3px;
+}
+.weather-app-v2 .container .weather-part .bottom-details .details .temp .deg {
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+.weather-app-v2 .container .weather-part .bottom-details .details p {
+    font-size: 14px;
+    margin-top: 1px;
+
+}
+.weather-app-v2 .container .weather-part .bottom-details .details {
+    margin-left: 15px;
+}
+/* End Weather App V2 */
+/* Start Todo-list App V2 */
+.todo-app-v2 {
+    background: #3c87ff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.todo-app-v2 .container {
+    max-width: 405px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 28px 0;
+}
+.todo-app-v2 .container .task-input {
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+.todo-app-v2 .container .task-input i {
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+}
+.todo-app-v2 .container .task-input input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 0 53px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+}
+.todo-app-v2 .container .task-input input::placeholder {
+    color: #bfbfbf;   
+}
+.todo-app-v2 .container .controls,
+.todo-app-v2 .container .task-box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-app-v2 .container .controls {
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+
+}
+.todo-app-v2 .container .controls .filters span {
+    margin: 0 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.todo-app-v2 .container .controls .filters span:first-child {
+    margin-left: 0;
+
+}
+.todo-app-v2 .container .controls .filters span.active {
+    color: #3c87ff; 
+}
+.todo-app-v2 .container .controls .clear-btn {
+    outline: none;
+    border: none;
+    background-color: #3c87ff;
+    color: #fff;
+    padding: 7px 13px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.todo-app-v2 .container .task-box {
+    margin: 20px 25px;
+}
+.todo-app-v2 .container .task-box .task{
+    font-size: 17px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+}
+.todo-app-v2 .container .task-box .task:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.todo-app-v2 .container .task-box .task label {
+    display: flex;
+}
+.todo-app-v2 .container .task-box .task label p.checked {
+    text-decoration: line-through;
+}
+.todo-app-v2 .container .task-box .task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+.todo-app-v2 .container .task-box .task .settings {
+    cursor: pointer;
+    position: relative;
+}
+.todo-app-v2 .container .task-box .task .settings .task-menu {
+    background-color: #fff;
+    padding: 5px 0;
+    position: absolute;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    z-index: 2;
+    right: -5px;
+    bottom: -65px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    transform-origin: top right;
+}
+/* .todo-app-v2 .container .task-box .task .settings:hover .task-menu{
+    transform: scale(1);
+} */
+.todo-app-v2 .container .task-box .task .settings .task-menu.show{
+    transform: scale(1);
+}
+.todo-app-v2 .container .task-box .task .settings .task-menu li {
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+    padding: 17px 15px;
+    cursor: pointer;
+}
+.todo-app-v2 .container .task-box .task .settings .task-menu li:last-child {
+    margin-bottom: 0;
+}
+.todo-app-v2 .container .task-box .task .settings .task-menu li:hover {
+    background-color: #f5f5f5;
+}
+.todo-app-v2 .container .task-box .task .settings .task-menu li i {
+    padding-right: 8px;
+}
+/* End Todo-list App V2 */

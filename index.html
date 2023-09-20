@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/to-do-list.css">
+</head>
+<body>
+    <!-- Start Todo-List App -->
+    <div class="to-do-app">
+        <div class="container">
+            <h2>To-Do List</h2>
+            <div class="task-input-box">
+                <input type="text" id="input-box" placeholder="Add you text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    <!-- End Todo-List App -->
+    <!-- Start Weather App -->
+    <div class="weather-app">
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="Enter city name" spellcheck="false">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                </button>
+            </div>
+            <div class="weather">
+                <div class="time">Loading...</div> <!-- Add this line -->
+                <div class="date"></div> <!-- Add this line -->
+                <img src="images/partly-clounds-day.png" class="weather-icon" alt="">
+                <h1 class="temp">22°Cc</h1>
+                <h2 class="city">Istanbul</h2>
+                <div class="details">
+                    <div class="col">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Weather App -->
+    <!-- Start Weather App V2 -->
+    <div class="weather-app-v2">
+        <div class="container ">
+            <h2><i class="fa-solid fa-arrow-left"></i> Weather App</h2>
+            <section class="input-part">
+                <p class="info-txt">Please enter a valid city name</p>
+                <input type="text" placeholder="Enter city name" spellcheck="false" required>
+                <div class="separator"></div>
+                <button>Get Device Loscation</button>
+            </section>
+            <section class="weather-part">
+                <img src="#" alt="weather Icon">
+                <div class="temp">
+                    <span class="numb">_</span>
+                    <span class="deg">°</span>C
+                </div>
+                <div class="weather">_</div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>_, _</span>
+                </div>
+                <div class="time-and-date">
+                    <p class="city-time">Time: <span class="time"></span></p>
+                    <p class="city-date">Date: <span class="date"></span></p>
+                </div>
+                <div class="bottom-details">
+                    <div class="column feels">
+                        <i class="fa-solid fa-temperature-low"></i>
+                        <div class="details">
+                            <div class="temp">
+                                <span class="numb-1">_</span>
+                                <span class="deg">°</span>C
+                            </div>
+                            <p>Feels like</p>
+                        </div>
+                    </div>
+                    <div class="column humidity">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="details">
+                            <span>_%</span>
+                            <p>Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- End Weather App V2 -->
+    <!-- Start Todo-list App V2 -->
+    <div class="todo-app-v2">
+        <div class="container">
+            <div class="task-input">
+                <i class="fa-solid fa-bars-staggered"></i>
+                <input type="text" placeholder="Add a new task">
+            </div>
+            <div class="controls">
+                <div class="filters">
+                    <span id="all" class="active">All</span>
+                    <span id="pending">Pending</span>
+                    <span id="completed">completed</span>
+                </div>
+                <button class="clear-btn">Clear All</button>
+            </div>
+            <ul class="task-box">
+                <!-- <li class="task">
+                    <label for="1">
+                        <input type="checkbox" id="1">
+                        <p>Renew gym membership</p>
+                    </label>
+                    <div class="settings">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <ul class="task-menu">
+                            <li><i class="fa-regular fa-pen-to-square"></i>Edit</li>
+                            <li><i class="fa-regular fa-trash-can"></i>Delete</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="task">
+                    <label for="1">
+                        <input type="checkbox" id="1">
+                        <p>create a video for youtube</p>
+                    </label>
+                    <div class="settings">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                <li class="task">
+                    <label for="1">
+                        <input type="checkbox" id="1">
+                        <p>write a blog about new trends</p>
+                    </label>
+                    <div class="settings">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                <li class="task">
+                    <label for="1">
+                        <input type="checkbox" id="1">
+                        <p>send project file to the client</p>
+                    </label>
+                    <div class="settings">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                <li class="task">
+                    <label for="1">
+                        <input type="checkbox" id="1">
+                        <p>discuss a new project with </p>
+                    </label>
+                    <div class="settings">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <!-- End Todo-list App V2 -->
+
+
+    <script src="todo-app.js"> </script>
+    <script src="weather.js"> </script>
+    <script src="todo-app-v2.js"> </script>
+</body>
+</html>
