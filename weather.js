@@ -81,7 +81,7 @@ function weatherDetails(info) {
         }
 
         // Fetch the time and date information from the TimeZoneDB API
-    fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=YSFO3BDYSVCR&format=json&by=position&lat=${info.coord.lat}&lng=${info.coord.lon}`)
+    fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=YSFO3BDYSVCR&format=json&by=position&lat=${info.coord.lat}&lng=${info.coord.lon}`)
     .then((res) => res.json())
     .then((timezoneInfo) => {
         const cityTime = new Date(timezoneInfo.formatted).toLocaleTimeString();
