@@ -12,57 +12,46 @@
     <link rel="stylesheet" href="css/to-do-list.css">
 </head>
 <body>
-    <!-- Start Todo-List App -->
-    <div class="to-do-app">
+    <!-- Start Header -->
+    <header>
         <div class="container">
-            <h2>To-Do List</h2>
-            <div class="task-input-box">
-                <input type="text" id="input-box" placeholder="Add you text">
-                <button onclick="addTask()">Add</button>
+            <a href="#" class="logo">
+                <img src="images/wEATHER & Todo-list.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How to use</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+            <div class="text">
+                <div class="content">
+                    <h1>Stay Organized and Productive <br>
+                        Plan Your Day with Weather Insights
+                    </h1>
+                    <p>Welcome to our website, where organization meets weather updates. Our weather app provides real-time forecasts tailored to your location, ensuring you're prepared for whatever the day brings. Meanwhile, our to-do list app simplifies task management and productivity. Experience the ease of staying organized and weather-ready with us.</p>
+                </div>
             </div>
-            <ul id="list-container">
+            <ul class="buttons">
+                <li><a href="#"><span></span>Weather App</a></li>
+                <li><a href="#"><span></span>Todo-list App</a></li>
             </ul>
         </div>
     </div>
-    <!-- End Todo-List App -->
-    <!-- Start Weather App -->
-    <div class="weather-app">
-        <div class="container">
-            <div class="search">
-                <input type="text" placeholder="Enter city name" spellcheck="false">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                </button>
-            </div>
-            <div class="weather">
-                <div class="time">Loading...</div> <!-- Add this line -->
-                <div class="date"></div> <!-- Add this line -->
-                <img src="images/partly-clounds-day.png" class="weather-icon" alt="">
-                <h1 class="temp">22°Cc</h1>
-                <h2 class="city">Istanbul</h2>
-                <div class="details">
-                    <div class="col">
-                        <i class="fa-solid fa-droplet"></i>
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <i class="fa-solid fa-wind"></i>
-                        <div>
-                            <p class="wind">15 km/h</p>
-                            <p>Wind Speed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Weather App -->
+    <!-- End Landing -->
     <!-- Start Weather App V2 -->
     <div class="weather-app-v2">
+        <div class="main-heading">
+            <h2>Weather App</h2>
+            <p>This is th best weather app you can see</p>
+        </div>
         <div class="container ">
             <h2><i class="fa-solid fa-arrow-left"></i> Weather App</h2>
             <section class="input-part">
@@ -176,7 +165,55 @@
         </div>
     </div>
     <!-- End Todo-list App V2 -->
-
+    <!-- Start Todo-List App -->
+    <div class="to-do-app">
+        <div class="container">
+            <h2>To-Do List</h2>
+            <div class="task-input-box">
+                <input type="text" id="input-box" placeholder="Add you text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    <!-- End Todo-List App -->
+    <!-- Start Weather App -->
+    <div class="weather-app">
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="Enter city name" spellcheck="false">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                </button>
+            </div>
+            <div class="weather">
+                <div class="time">Loading...</div> <!-- Add this line -->
+                <div class="date"></div> <!-- Add this line -->
+                <img src="images/partly-clounds-day.png" class="weather-icon" alt="">
+                <h1 class="temp">22°Cc</h1>
+                <h2 class="city">Istanbul</h2>
+                <div class="details">
+                    <div class="col">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Weather App -->
 
     <script src="todo-app.js"> </script>
     <script src="weather.js"> </script>

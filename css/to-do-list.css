@@ -43,6 +43,202 @@ ul {
     }
 }
 /* End Global Rules */
+/* Start Components */
+.main-heading {
+    text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background: #333;
+    bottom: -30px;
+    width: 120px;
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 14px;
+    width: 14px;
+    bottom: -37px;
+    border: 2px solid #333;
+    background: white;
+    border-radius: 50%;}
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+/* Start Header */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 5px;
+    min-height: 97px;
+}
+header .logo img {
+    height: 68px;
+    position: absolute;
+    top: 20px;
+}
+@media (max-width: 767px) {
+    header .logo img {
+        height: 33px;
+    }
+}
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    padding: 37px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+header nav ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: 17px;
+    transition: 0.5s;
+}
+header nav ul li a:hover::after {
+    width: 100%;
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url(../images/footer.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.landing .text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 79px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .landing .text {
+        padding: 40px;
+        margin-top: -20px;
+    }
+}
+
+.landing .text .content h1 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+.landing ul.buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 170px;
+    display: flex;
+}
+@media (max-width: 767px) {
+    .landing ul.buttons {
+        bottom: 84px;
+    }
+}
+.landing ul.buttons li {
+
+}
+.landing ul.buttons li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    width: 200px;
+    padding: 15px 0;
+    margin: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .landing ul.buttons li a  {
+        width: 160px;
+    }
+}
+.landing ul.buttons li a span {
+    background-color: #009688;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    transition: 0.5s;
+}
+.landing ul.buttons li a:hover span {
+    width: 100%;
+}
+.landing ul.buttons li a:hover {
+    border: none;
+}
+/* End Landing */
 /* Start To-do List App */
 .to-do-app {
     width: 100%;
@@ -133,7 +329,6 @@ ul {
     background-color: #edeef0;
 }
 /* End To-do List App */
-/* --------------------------------------------------------------------------------------- */
 /* Start Wheather App */
 .weather-app {
     /* background: #222; */
@@ -211,7 +406,6 @@ ul {
     font-size: 28px;
 }
 /* End Weather App */
-/* --------------------------------------------------------------------------------------- */
 /* Start Weather App V2 */
 .weather-app-v2 {
     display: flex;
