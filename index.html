@@ -22,8 +22,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">How to use</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,140 +31,246 @@
     <!-- End Header -->
     <!-- Start Landing -->
     <div class="landing">
-            <div class="text">
-                <div class="content">
-                    <h1>Stay Organized and Productive <br>
-                        Plan Your Day with Weather Insights
-                    </h1>
-                    <p>Welcome to our website, where organization meets weather updates. Our weather app provides real-time forecasts tailored to your location, ensuring you're prepared for whatever the day brings. Meanwhile, our to-do list app simplifies task management and productivity. Experience the ease of staying organized and weather-ready with us.</p>
+        <div class="text">
+            <div class="content">
+                <h1>Stay Organized and Productive <br>
+                    Plan Your Day with Weather Insights
+                </h1>
+                <p>Welcome to our website, where organization meets weather updates. Our weather app provides real-time forecasts tailored to your location, ensuring you're prepared for whatever the day brings. Meanwhile, our to-do list app simplifies task management and productivity. Experience the ease of staying organized and weather-ready with us.</p>
+                <div class="buttonss">
+                    <li><a href="#weather-app"><span></span>Weather App</a></li>
+                    <li><a href="#todo-list-app"><span></span>Todo-list App</a></li>
                 </div>
             </div>
-            <ul class="buttons">
-                <li><a href="#"><span></span>Weather App</a></li>
-                <li><a href="#"><span></span>Todo-list App</a></li>
-            </ul>
         </div>
     </div>
     <!-- End Landing -->
     <!-- Start Weather App V2 -->
-    <div class="weather-app-v2">
-        <div class="main-heading">
-            <h2>Weather App</h2>
-            <p>This is th best weather app you can see</p>
-        </div>
-        <div class="container ">
-            <h2><i class="fa-solid fa-arrow-left"></i> Weather App</h2>
-            <section class="input-part">
-                <p class="info-txt">Please enter a valid city name</p>
-                <input type="text" placeholder="Enter city name" spellcheck="false" required>
-                <div class="separator"></div>
-                <button>Get Device Loscation</button>
-            </section>
-            <section class="weather-part">
-                <img src="#" alt="weather Icon">
-                <div class="temp">
-                    <span class="numb">_</span>
-                    <span class="deg">°</span>C
-                </div>
-                <div class="weather">_</div>
-                <div class="location">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>_, _</span>
-                </div>
-                <div class="time-and-date">
-                    <p class="city-time">Time: <span class="time"></span></p>
-                    <p class="city-date">Date: <span class="date"></span></p>
-                </div>
-                <div class="bottom-details">
-                    <div class="column feels">
-                        <i class="fa-solid fa-temperature-low"></i>
-                        <div class="details">
-                            <div class="temp">
-                                <span class="numb-1">_</span>
-                                <span class="deg">°</span>C
-                            </div>
-                            <p>Feels like</p>
-                        </div>
+    <div class="weather-app-v2" id="weather-app">
+        <div class="mainContainer">
+            <div class="main-heading">
+                <h2>Weather App</h2>
+                <p>This is th best weather app you can see</p>
+            </div>
+            <div class="container ">
+                <h2><i class="fa-solid fa-arrow-left"></i> Weather App</h2>
+                <section class="input-part">
+                    <p class="info-txt">Please enter a valid city name</p>
+                    <input type="text" placeholder="Enter city name" spellcheck="false" required>
+                    <div class="separator"></div>
+                    <button>Get Device Loscation</button>
+                </section>
+                <section class="weather-part">
+                    <img src="#" alt="weather Icon">
+                    <div class="temp">
+                        <span class="numb">_</span>
+                        <span class="deg">°</span>C
                     </div>
-                    <div class="column humidity">
-                        <i class="fa-solid fa-wind"></i>
-                        <div class="details">
-                            <span>_%</span>
-                            <p>Humidity</p>
+                    <div class="weather">_</div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>_, _</span>
+                    </div>
+                    <div class="time-and-date">
+                        <p class="city-time">Time: <span class="time"></span></p>
+                        <p class="city-date">Date: <span class="date"></span></p>
+                    </div>
+                    <div class="bottom-details">
+                        <div class="column feels">
+                            <i class="fa-solid fa-temperature-low"></i>
+                            <div class="details">
+                                <div class="temp">
+                                    <span class="numb-1">_</span>
+                                    <span class="deg">°</span>C
+                                </div>
+                                <p>Feels like</p>
                             </div>
                         </div>
+                        <div class="column humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <div class="details">
+                                <span>_%</span>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="column pressure">
+                            <i class="fa-solid fa-arrow-down-wide-short"></i>
+                            <div class="details">
+                                <span></span>
+                                <p>Pressure</p>
+                            </div>
+                        </div>
+                        <div class="column wind">
+                            <i class="fa-solid fa-wind"></i>
+                            <div class="details">
+                                <span></span>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
     <!-- End Weather App V2 -->
     <!-- Start Todo-list App V2 -->
-    <div class="todo-app-v2">
-        <div class="container">
-            <div class="task-input">
-                <i class="fa-solid fa-bars-staggered"></i>
-                <input type="text" placeholder="Add a new task">
+    <div class="todo-app-v2" id="todo-list-app">
+        <div class="main-container">
+            <div class="main-heading">
+                <h2>To-Do List</h2>
+                <p>This is th best To-Do List app you can see</p>
             </div>
-            <div class="controls">
-                <div class="filters">
-                    <span id="all" class="active">All</span>
-                    <span id="pending">Pending</span>
-                    <span id="completed">completed</span>
+            <div class="container">
+                <h2>To-Do List</h2>
+                <div class="task-input">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <input type="text" placeholder="Add a new task">
                 </div>
-                <button class="clear-btn">Clear All</button>
+                <div class="controls">
+                    <div class="filters">
+                        <span id="all" class="active">All</span>
+                        <span id="pending">Pending</span>
+                        <span id="completed">completed</span>
+                    </div>
+                    <button class="clear-btn">Clear All</button>
+                </div>
+                <ul class="task-box">
+                    <!-- <li class="task">
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            <p>Renew gym membership</p>
+                        </label>
+                        <div class="settings">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="task-menu">
+                                <li><i class="fa-regular fa-pen-to-square"></i>Edit</li>
+                                <li><i class="fa-regular fa-trash-can"></i>Delete</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="task">
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            <p>create a video for youtube</p>
+                        </label>
+                        <div class="settings">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    <li class="task">
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            <p>write a blog about new trends</p>
+                        </label>
+                        <div class="settings">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    <li class="task">
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            <p>send project file to the client</p>
+                        </label>
+                        <div class="settings">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    <li class="task">
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            <p>discuss a new project with </p>
+                        </label>
+                        <div class="settings">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
-            <ul class="task-box">
-                <!-- <li class="task">
-                    <label for="1">
-                        <input type="checkbox" id="1">
-                        <p>Renew gym membership</p>
-                    </label>
-                    <div class="settings">
-                        <i class="fa-solid fa-ellipsis"></i>
-                        <ul class="task-menu">
-                            <li><i class="fa-regular fa-pen-to-square"></i>Edit</li>
-                            <li><i class="fa-regular fa-trash-can"></i>Delete</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="task">
-                    <label for="1">
-                        <input type="checkbox" id="1">
-                        <p>create a video for youtube</p>
-                    </label>
-                    <div class="settings">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
-                <li class="task">
-                    <label for="1">
-                        <input type="checkbox" id="1">
-                        <p>write a blog about new trends</p>
-                    </label>
-                    <div class="settings">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
-                <li class="task">
-                    <label for="1">
-                        <input type="checkbox" id="1">
-                        <p>send project file to the client</p>
-                    </label>
-                    <div class="settings">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
-                <li class="task">
-                    <label for="1">
-                        <input type="checkbox" id="1">
-                        <p>discuss a new project with </p>
-                    </label>
-                    <div class="settings">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
-                </li> -->
-            </ul>
         </div>
     </div>
     <!-- End Todo-list App V2 -->
+    <!-- Start About -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="special-heading">Aboout</h2>
+            <p>A Little Bit About Me</p>
+            <div class="about-content">
+                <div class="image">
+                    <img src="images/IMG_1210.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>👋 Hi, I'm Noureldien Sultan Alsharif, a third-year software engineering student. I'm deeply passionate about developing innovative solutions and tackling real-world challenges through code, I'm on a journey to become a skilled software engineer. With a solid foundation in programming languages like Java, python, HTML and CSS as well as concepts like OOP, DSA and Design Pattern, I've also completed relevant courses that both augment my current knowledge and contribute to my ongoing expertise. While I'm still in the early stages of my career, I'm dedicated to learning and growth. I've already gained hands-on experience in projects at my university, which enhanced my problem-solving and teamwork abilities. Eager to contribute to cutting-edge projects, I approach each day with enthusiasm and a thirst for knowledge. I'm excited to keep embracing new technologies and expanding my horizons further.</p>
+                    <hr>
+                    <p>🌟 In addition to my academic pursuits, I've also had the privilege of working on an exciting project during my time at the university. This project, part of my summer practice program, was a web application that combined two essential tools: a weather app and a to-do list manager.                 
+                        <button id="open">Click for more information about the project</button></p>
+                </div>
+                <div class="modal-container" id="modal-container">
+                    <div class="modal">
+                        <h1> Information about this project </h1>
+                        <p>🌦️ The weather app I developed offers users the flexibility to obtain real-time weather information for any location around the world. Whether you want to check the current temperature, humidity, wind speed, atmospheric pressure, "feels like" temperature, time, date, or a detailed weather description, our app has you covered. Not only that, but it also provides a visual representation of the weather conditions. If it's raining, you'll see raindrops; on clear days, you'll see a sun or a moon based on whether it's day or night. The app dynamically adjusts the images to match the time of day, ensuring a seamless user experience.
+                            <br><br><br>
+                            ✅ On the other hand, the to-do list app I created simplifies task management. It allows users to create, organize, and track their to-do items efficiently. You can mark tasks as complete, keep a record of pending items, and, when needed, clear the entire list with just a click. The best part is that your to-do list is securely stored in local storage, ensuring your tasks are always at your fingertips.
+                            <br><br><br>
+                            🚀 This project was a fantastic opportunity for me to apply my programming skills and creativity to solve practical problems. It also reinforced my understanding of web development and the importance of user-friendly interfaces. I'm eager to continue exploring new technologies and developing innovative solutions as I progress in my software engineering journey.
+                            
+                            </p>
+                        <button id="close">Close me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Contact</h2>
+            <p>Feel Free To Drop Us A Line</p>
+            <div class="content">
+                <form action="https://formsubmit.co/testeldien@gmail.com" method="post">
+                    <input class="main-input" type="text" name="name" placeholder="Your Name" required>
+                    <input class="main-input" type="email" name="mail" placeholder="Your Email" required>
+                    <input class="main-input" type="text" name="subject" placeholder="Subject" required>
+                    <textarea class="main-input" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+    <!-- Start footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="images/wEATHER & Todo-list.png" alt="logo">
+            </div>
+            <p>We Are The Best</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/noureldien-ahmed" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/noureldien-ahmed" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/NureddinSoltan/uni-summer-practice-1.git" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/noureldien-ahmed" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <div class="source-code">
+                    <a href="https://github.com/NureddinSoltan/uni-summer-practice-1.git" target="_blank"><i class="fa-brands fa-github"></i>Source Code</a>
+                </div>
+                <!-- <i class="fa-brands fa-linkedin-in"></i> -->
+            <p class="copyright">&copy; 2023 <span>NOURELDIEN</span> All Right Reserved</p> 
+            </div>
+        </div>
+    </div>
+    <!-- End footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Start Todo-List App -->
     <div class="to-do-app">
         <div class="container">
@@ -218,5 +324,6 @@
     <script src="todo-app.js"> </script>
     <script src="weather.js"> </script>
     <script src="todo-app-v2.js"> </script>
+    <script src="other.js"></script>
 </body>
 </html>

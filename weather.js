@@ -57,7 +57,8 @@ function weatherDetails(info) {
         const city = info.name;
         const country = info.sys.country;
         const {description, id} = info.weather[0];
-        const {temp, feels_like, humidity} = info.main;
+        const {temp, feels_like, humidity, pressure} = info.main;
+        const {speed} = info.wind;
         const {sunrise, sunset} = info.sys;
         const currentTime = new Date().getTime() / 1000;
         const isDaytime = currentTime >= sunrise && currentTime < sunset;
@@ -90,20 +91,23 @@ function weatherDetails(info) {
         // Update the HTML elements with the time and date information
         const timeElement = timeAndDate.querySelector(".city-time .time");
         const dateElement = timeAndDate.querySelector(".city-date .date");
-        timeElement.innerText = `Time: ${cityTime}`;
-        dateElement.innerText = `Date: ${cityDate}`;
+        // timeElement.innerText = `Time: ${cityTime}`;
+        // dateElement.innerText = `Date: ${cityDate}`;
+        timeElement.innerText = `${cityTime}`;
+        dateElement.innerText = `${cityDate}`;
     })
     .catch(() => {
         console.error("Failed to fetch time zone information");
     });
-
-
 
         weather.querySelector(".temp .numb").innerText = Math.floor(temp);
         weather.querySelector(".weather").innerText = description;
         weather.querySelector(".location span").innerText = `${city}, ${country}`;
         weather.querySelector(".temp .numb-1").innerText = Math.floor(feels_like);
         weather.querySelector(".humidity span").innerText = `${humidity}%`;
+        weather.querySelector(".pressure span").innerText = `${pressure} mb`;
+        weather.querySelector(".wind span").innerText = `${speed} m/s`;
+
 
         inputField.value = "";
         infoTxt.classList.remove("pending", "error");
