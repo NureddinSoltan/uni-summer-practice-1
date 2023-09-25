@@ -21,7 +21,6 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">How to use</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -33,8 +32,8 @@
     <div class="landing">
         <div class="text">
             <div class="content">
-                <h1>Stay Organized and Productive <br>
-                    Plan Your Day with Weather Insights
+                <h1>Stay Organized and Productive, <br>
+                    Plan Your Day with Weather Insights.
                 </h1>
                 <p>Welcome to our website, where organization meets weather updates. Our weather app provides real-time forecasts tailored to your location, ensuring you're prepared for whatever the day brings. Meanwhile, our to-do list app simplifies task management and productivity. Experience the ease of staying organized and weather-ready with us.</p>
                 <div class="buttonss">
@@ -50,7 +49,9 @@
         <div class="mainContainer">
             <div class="main-heading">
                 <h2>Weather App</h2>
-                <p>This is th best weather app you can see</p>
+                <p>Discover the world with our user-friendly weather app. It's not just a weather forecast; it's your gateway to staying informed about the elements around you.
+                </p>
+                <a href="#about-heading">Explore the About section for more details and features.</a>
             </div>
             <div class="container ">
                 <h2><i class="fa-solid fa-arrow-left"></i> Weather App</h2>
@@ -58,7 +59,7 @@
                     <p class="info-txt">Please enter a valid city name</p>
                     <input type="text" placeholder="Enter city name" spellcheck="false" required>
                     <div class="separator"></div>
-                    <button>Get Device Loscation</button>
+                    <button>Get Device Location</button>
                 </section>
                 <section class="weather-part">
                     <img src="#" alt="weather Icon">
@@ -118,7 +119,9 @@
         <div class="main-container">
             <div class="main-heading">
                 <h2>To-Do List</h2>
-                <p>This is th best To-Do List app you can see</p>
+                <p>Simplify your tasks with our intuitive To-Do List app. Whether you're organizing your day or managing ongoing projects, this app is your ultimate task companion.
+                </p>
+                <a href="#about-heading">Explore the About section for more details and features.</a>
             </div>
             <div class="container">
                 <h2>To-Do List</h2>
@@ -189,7 +192,7 @@
     <!-- Start About -->
     <div class="about" id="about">
         <div class="container">
-            <h2 class="special-heading">Aboout</h2>
+            <h2 class="special-heading" id="about-heading">Aboout</h2>
             <p>A Little Bit About Me</p>
             <div class="about-content">
                 <div class="image">
@@ -209,7 +212,6 @@
                             ✅ On the other hand, the to-do list app I created simplifies task management. It allows users to create, organize, and track their to-do items efficiently. You can mark tasks as complete, keep a record of pending items, and, when needed, clear the entire list with just a click. The best part is that your to-do list is securely stored in local storage, ensuring your tasks are always at your fingertips.
                             <br><br><br>
                             🚀 This project was a fantastic opportunity for me to apply my programming skills and creativity to solve practical problems. It also reinforced my understanding of web development and the importance of user-friendly interfaces. I'm eager to continue exploring new technologies and developing innovative solutions as I progress in my software engineering journey.
-                            
                             </p>
                         <button id="close">Close me</button>
                     </div>
@@ -256,71 +258,7 @@
         </div>
     </div>
     <!-- End footer -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Start Todo-List App -->
-    <div class="to-do-app">
-        <div class="container">
-            <h2>To-Do List</h2>
-            <div class="task-input-box">
-                <input type="text" id="input-box" placeholder="Add you text">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
-            </ul>
-        </div>
-    </div>
-    <!-- End Todo-List App -->
-    <!-- Start Weather App -->
-    <div class="weather-app">
-        <div class="container">
-            <div class="search">
-                <input type="text" placeholder="Enter city name" spellcheck="false">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                </button>
-            </div>
-            <div class="weather">
-                <div class="time">Loading...</div> <!-- Add this line -->
-                <div class="date"></div> <!-- Add this line -->
-                <img src="images/partly-clounds-day.png" class="weather-icon" alt="">
-                <h1 class="temp">22°Cc</h1>
-                <h2 class="city">Istanbul</h2>
-                <div class="details">
-                    <div class="col">
-                        <i class="fa-solid fa-droplet"></i>
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <i class="fa-solid fa-wind"></i>
-                        <div>
-                            <p class="wind">15 km/h</p>
-                            <p>Wind Speed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Weather App -->
-
+    <!-- Scripts -->
     <script src="todo-app.js"> </script>
     <script src="weather.js"> </script>
     <script src="todo-app-v2.js"> </script>

@@ -1,6 +1,8 @@
 /* Start variables */
 :root {
     --section-padding: 100px;
+    --main-color:#10cab7;
+    --box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
 }
 /* Start Global Rules */
 * {
@@ -120,8 +122,6 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding-top: 5px;
-    min-height: 97px;
 }
 header .logo img {
     height: 68px;
@@ -151,6 +151,11 @@ header nav ul li a {
     transition: 0.3s;
     position: relative;
     z-index: 2;
+}
+@media (max-width: 767px) {
+    header nav ul li a {
+        padding: 25px 10px;
+    }
 }
 header nav ul li a::after {
     content: "";
@@ -208,9 +213,7 @@ header nav ul li a:hover::after {
     flex-direction: column;
     width: 100%;
     margin-top: 77px;
-
 }
-
 .landing .text .content h1 {
     font-size: 32px;
     line-height: 1.5;
@@ -219,6 +222,7 @@ header nav ul li a:hover::after {
 @media (max-width: 767px) {
     .landing .text .content h1 {
         margin-bottom: 40px;
+        font-size: 30px;
     }
 }
 .landing .text .content p {
@@ -232,12 +236,20 @@ header nav ul li a:hover::after {
 }
 @media (max-width: 767px) {
     .landing .buttonss {
-        margin-top: 18px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
     }
 }
 .landing .buttonss li {
     list-style: none;
     padding: 10px;
+}
+@media (max-width: 767px) {
+    .landing .buttonss li {
+        padding: 0;
+
+    }
 }
 .landing .buttonss li a {
     color: white;
@@ -277,184 +289,7 @@ header nav ul li a:hover::after {
 .landing .buttonss li a:hover {
     border: none;
 }
-.to-do-app {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
-}
-.to-do-app .container {
-    width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-}
-.to-do-app .container h2 {
-    color: #002765;
-    display: flex;
-    align-items: center;
-}
-.to-do-app .container .task-input-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-.to-do-app .container .task-input-box input {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-}
-.to-do-app .container .task-input-box button {
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
-}
-.to-do-app .container ul li {
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-}
-.to-do-app .container ul li::before {
-    content: "\f111";
-    font-family: "Font Awesome 5 free";
-    position: absolute;
-    border-radius: 50%;
-    left: 8px;
-    top: 9px;
-    font-size: 25px;
-    color: #777;
-}
-.to-do-app .container ul li.active {
-    color: #555;
-    text-decoration: line-through;
-}
-.to-do-app .container ul li.active::before {
-    content: "\f058";
-    font-family: "Font Awesome 5 free";
-    line-height: 1;
-    color: #ff5945;
-    font-weight: 900;
-}
-.to-do-app .container ul li span {
-    position: absolute;
-    right: 0;
-    top: 1px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-}
-.to-do-app .container ul li span:hover {
-    background-color: #edeef0;
-}
-/* End To-do List App */
-/* Start Wheather App */
-.weather-app {
-    /* background: #222; */
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-.weather-app .container {
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
-    color: #fff;
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
-}
-.weather-app .container .search {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.weather-app .container .search input {
-    border: 0;
-    outline: 0;
-    background-color: #ebfffc;
-    color: #555;
-    padding: 10px 25px;
-    height: 60px;
-    border-radius: 30px;
-    flex: 1;
-    margin-right: 16px;
-    font-size: 18px;
-}
-.weather-app .container .search button {
-    border: 0;
-    outline: 0;
-    background-color: #ebfffc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
-.weather-app .container .weather img {
-    width:45%;
-    /* width: 170px; */
-    margin-top: 30px;
-}
-.weather-app .container .weather h1 {
-    font-size: 80px;
-    font-weight: normal;
-    margin-top: 15px;
-}
-.weather-app .container .weather h2 {
-    font-size: 45px;
-    font-weight: normal;
-    margin-top: -20px;
-}
-.weather-app .container .weather .details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
-}
-.weather-app .container .weather .details .col {
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-.weather-app .container .weather .details .col i{
-    font-size: 40px;
-    margin-right: 10px;
-}
-.weather-app .container .weather .details .col p:first-child{
-    font-size: 28px;
-}
-/* End Weather App */
-
-
-
-
-
-
-
-
-
-
-
-
+/* End Landing */
 /* Start Weather App V2 */
 .weather-app-v2 {
     padding-top: var(--section-padding);
@@ -464,6 +299,8 @@ header nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 @media (max-width: 767px) {
     .weather-app-v2 {
@@ -471,7 +308,6 @@ header nav ul li a:hover::after {
         min-height: 110vh;
     }
 }
-
 .weather-app-v2 .mainContainer {
     display: flex;
     justify-content: space-between;
@@ -499,7 +335,17 @@ header nav ul li a:hover::after {
 }
 .weather-app-v2 .main-heading p {
     margin-bottom: 60px;
-    width: 100%;
+    width: 100%; 
+    color: #b3b3b3;
+}
+@media (max-width: 767px) {
+    .weather-app-v2 .main-heading p {
+        margin-bottom: 0px;
+        margin-bottom: 5px;
+    }
+}
+.weather-app-v2 .main-heading a {
+    color: #b3b3b3;
 }
 .weather-app-v2 .main-heading h2 {
     margin-bottom: 60px;
@@ -515,7 +361,12 @@ header nav ul li a:hover::after {
     border-radius: 7px;
     /* flex-basis: 45%; */
 }
-
+@media (max-width: 767px) {
+    .weather-app-v2 .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 .weather-app-v2 .container h2 {
     color: #002765;
     font-weight: bold;
@@ -570,7 +421,7 @@ header nav ul li a:hover::after {
 .weather-app-v2 .container .input-part input {
     background-color: #edeef0;
     text-align: center;
-
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
 }
 .weather-app-v2 .container .input-part input:is(:focus, :valid) {
     border: 2px solid blue;
@@ -595,9 +446,8 @@ header nav ul li a:hover::after {
     color: #ffff;
     cursor: pointer;
     background-color: blue;
+    box-shadow: var(--box-shadow);
 }
-
-
 .weather-app-v2 .container .weather-part {
     margin: 30px 0 0;
     display: none;
@@ -607,9 +457,10 @@ header nav ul li a:hover::after {
 }
 .weather-app-v2.active .weather-part {
     display: flex;
+    margin-bottom: 5px;
 }
 .weather-app-v2 .container .weather-part img {
-    max-width: 170px;
+    max-width: 180px;
 }
 .weather-app-v2 .container .weather-part .temp {
     display: flex;
@@ -627,7 +478,7 @@ header nav ul li a:hover::after {
 .weather-app-v2 .container .weather-part .weather {
     text-align: center;
     font-size: 21px;
-    margin: -5px 20px 15px;
+    margin: -2px 20px 20px;
 }
 .weather-app-v2 .container .weather-part .location {
     display: flex;
@@ -639,28 +490,36 @@ header nav ul li a:hover::after {
     font-size: 22px;
     margin-right: 5px;
 }
+.weather-app-v2 .container .weather-part .time-and-date {
+    margin-bottom: 17px;
+    text-align: center;
+}
 .weather-app-v2 .container .weather-part .bottom-details {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #bfbfbf;
+    /* border-top: 1px solid #bfbfbf; */
     flex-wrap: wrap;
 }
-.weather-app-v2 .container .weather-part .bottom-details .column{
+.weather-app-v2 .container .weather-part .bottom-details .column {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 15px 0;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 49%;
+    border: 1px solid blue;
+    border-radius: 20px;
+    margin: 5px 0 5px 1px;
+    transition: 0.2s;
+}
+.weather-app-v2 .container .weather-part .bottom-details .column:hover {
+    background-color: #e7e5e5;
 }
 .weather-app-v2 .container .weather-part .bottom-details .column i {
     font-size: 40px;
     color: blue;
-}
-.weather-app-v2 .container .weather-part .bottom-details .column.humidity {
-    border-left: 1px solid #bfbfbf;
 }
 .weather-app-v2 .container .weather-part .bottom-details .details .temp,
 .weather-app-v2 .container .weather-part .humidity span,
@@ -678,37 +537,21 @@ header nav ul li a:hover::after {
 .weather-app-v2 .container .weather-part .bottom-details .details p {
     font-size: 14px;
     margin-top: 1px;
-
 }
 .weather-app-v2 .container .weather-part .bottom-details .details {
     margin-left: 15px;
 }
 /* End Weather App V2 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Start Todo-list App V2 */
 .todo-app-v2 {
     background: #3c87ff;
     min-height: 100vh;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246))
 }
 .todo-app-v2 .main-container {
 
@@ -720,7 +563,29 @@ header nav ul li a:hover::after {
     
 }
 .todo-app-v2 .main-heading p {
-    margin: 0 auto 50px;
+    margin: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+@media (max-width: 767px) {
+    .weather-app-v2 .main-heading p {
+        margin-bottom: 0px;
+        margin-bottom: 5px;
+    }
+}
+.todo-app-v2 .main-heading a {
+    color: white;
+}
+@media (max-width: 767px) {
+    .weather-app-v2 .main-heading a {
+        margin-bottom: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .weather-app-v2 .main-heading p {
+        margin: 0;
+        margin-bottom: 5px;
+    }
 }
 .todo-app-v2 .container {
     max-width: 550px;
@@ -734,10 +599,20 @@ header nav ul li a:hover::after {
 .todo-app-v2 .container h2 {
     padding: 0 25px 10px;
 }
+@media (max-width: 767px) {
+    .todo-app-v2 .container h2 {
+        padding: 0 15px 10px;
+    }
+}
 .todo-app-v2 .container .task-input {
     height: 52px;
     padding: 0 25px;
     position: relative;
+}
+@media (max-width: 767px) {
+    .todo-app-v2 .container .task-input {
+        padding: 0 15px;
+    }
 }
 .todo-app-v2 .container .task-input i {
     position: absolute;
@@ -752,6 +627,7 @@ header nav ul li a:hover::after {
     border-radius: 5px;
     border: 1px solid #999;
     outline: none;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.05);
 }
 .todo-app-v2 .container .task-input input::placeholder {
     color: #bfbfbf;   
@@ -765,7 +641,11 @@ header nav ul li a:hover::after {
 .todo-app-v2 .container .controls {
     padding: 18px 25px;
     border-bottom: 1px solid #ccc;
-
+}
+@media (max-width: 767px) {
+    .todo-app-v2 .container .controls {
+        padding: 18px 13px;
+    }
 }
 .todo-app-v2 .container .controls .filters span {
     margin: 0 8px;
@@ -788,6 +668,7 @@ header nav ul li a:hover::after {
     border-radius: 4px;
     font-size: 13px;
     cursor: pointer;
+    box-shadow: var(--box-shadow);
 }
 .todo-app-v2 .container .task-box {
     margin: 20px 25px;
@@ -937,7 +818,7 @@ header nav ul li a:hover::after {
     padding: 10px 25px;
     border: 0;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.4);
+    box-shadow: var(--box-shadow)
 }
 .about .about-content .modal-container {
     background-color: rgb(0, 0, 0, 0.3);
@@ -971,7 +852,7 @@ header nav ul li a:hover::after {
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.4);
+    box-shadow: var(--box-shadow);
     text-align: center;
 }
 .about .about-content .modal-container .modal h1 {
@@ -1091,5 +972,4 @@ header nav ul li a:hover::after {
     font-weight: bold;
     color: #19c8fa;
 }
-
 /* End Footer */
