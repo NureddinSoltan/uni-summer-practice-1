@@ -313,10 +313,7 @@ header nav ul li a:hover::after {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-@media (max-width: 767px) {
-    .weather-app-v2 .mainContainer .main-heading {
-    }
-}
+
 @media (max-width: 767px) {
     .weather-app-v2 .mainContainer {
         flex-direction: column;
@@ -551,17 +548,8 @@ header nav ul li a:hover::after {
     overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;
-    linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246))
 }
-.todo-app-v2 .main-container {
 
-}
-.todo-app-v2 .main-heading {
-    
-}
-.todo-app-v2 .main-heading h2 {
-    
-}
 .todo-app-v2 .main-heading p {
     margin: auto;
     margin-bottom: 5px;
@@ -854,9 +842,6 @@ header nav ul li a:hover::after {
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     text-align: center;
-}
-.about .about-content .modal-container .modal h1 {
-
 }
 .about .about-content .modal-container .modal p {
     opacity: 0.7;
